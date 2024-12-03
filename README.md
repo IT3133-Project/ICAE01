@@ -67,7 +67,8 @@ Before you begin, ensure you have the following installed on your system:
 ---
 
 # Screenshots
+Main Page
 
-
+![alt text](image.png)
 ---
 
