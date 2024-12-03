@@ -19,34 +19,34 @@ export default function Products() {
             }
             SetItem((prevItems) => {
                 return [...prevItems, newItem]
-              });
+            });
         }
     }
 
-        return (
-            <>
-                <div className="item1">
-                    <h1>Flower Shop</h1>
-                </div>
-                <div className="item2">
-                    <h4 className="card-title">Buy flowers</h4>
-                    <div className="grid-container">
-                        {
-                            //product
-                            flowers.map((prod) => (
-                                <Product product={prod} key={prod.id} addToCart={addCart} />
-                            ))
-                        }
-                    </div>
-
-                </div>
-                <div className="item3">
+    return (
+        <>
+            <div className="item1">
+                <h1>Flower Shop</h1>
+            </div>
+            <div className="item2">
+                <h4 className="card-title">Buy flowers</h4>
+                <div className="grid-container">
                     {
-                        //cart
-                        <Cart CartItem={Item}/>
+                        //product
+                        flowers.map((prod) => (
+                            <Product product={prod} key={prod.id} addCart={addCart} />
+                        ))
                     }
                 </div>
-            </>
-        );
 
-    }
+            </div>
+            <div className="item3">
+                {
+                    //cart
+                    <Cart Item={Item} />
+                }
+            </div>
+        </>
+    );
+
+}
